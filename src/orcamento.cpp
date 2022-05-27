@@ -23,9 +23,9 @@ bool verificarDia()
         ano = ano - 1;
     }
 
-    //calculo do dia da semana
-    formula = dia + 2 * mes + (3 * (mes + 1) / 5) + ano + ano / 4 - ano / 100 + ano / 400 + 2; 
-    dia_semana = formula % 7; 
+    // calculo do dia da semana
+    formula = dia + 2 * mes + (3 * (mes + 1) / 5) + ano + ano / 4 - ano / 100 + ano / 400 + 2;
+    dia_semana = formula % 7;
 
     if (mes == 13) // Se for mês de janeiro, coloca o valor certo do mês e do ano para mostrar na tela.
     {
@@ -96,9 +96,54 @@ void orcamentoChowChawgas()
     orcamento3 = (porte_pequeno * 30) + (porte_grande * 45); // calculo do orcamento
 }
 
-// comparando orcamentos, é o metodo principal, dele sera chamado o metodo de verificar dia, a apartir do dia vamos
+// comparando orcamentos é o metodo principal, dele sera chamado o metodo de verificarAno, a apartir do dia vamos
 // para a chamada os metodos de  orcamentos de cada local. Depois de comparar as respostas sera impresso o resultado
 void comparandoOrcamentos()
 {
-    
+    // chamada dos metodos para serem feitos os calculos
+    verificarAno();
+    orcamentoMeuCaninoFeliz();
+    orcamentoVaiRex();
+    orcamentoChowChawgas();
+    if (orcamento1 > orcamento2 || orcamento1 > orcamento3) // se o orcamento 1 for o maior
+    {
+        cout << "\n\tResultado: Meu Canino Feliz - %f" << orcamento1;
+    }
+    else if (orcamento2 > orcamento1 || orcamento2 > orcamento3) // se o orcamento 2 for o maior
+    {
+        cout << "\n\tResultado: Vai Rex - %f" << orcamento2;
+    }
+    else if (orcamento3 > orcamento1 || orcamento3 > orcamento2) // se o orcamento 3 for o maior
+    {
+        cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
+    }
+    else if (orcament1 == orcamento2 && orcamento2 == orcamento3 && orcamento1 == orcamento3) // se existirem orcamentos iguais
+    {
+        if (orcament1 == orcamento2) // se 1 e 2 forem iguais
+            cout << "\n\tResultado: Vai Rex - %f" << orcamento2; 
+        if (orcamento2 == orcamento3)
+            cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
+        if (orcamento1 == orcamento3)
+            cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
+        if (orcamento1 == orcamento2 || orcamento1 == orcamento3)
+            cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
+    }
+    else
+        cout << "\n[ERRO]:Nao foi possivel calcular o orcamento";
+}
+
+void setDia(int dia){
+    this->dia = dia;
+}
+void setMes(int mes){
+    this->mes = mes;
+}
+void setAno(int ano){
+    this-> ano = ano;
+}
+void setPorte_pequeno(int porte_pequeno){
+    this->porte_pequeno = porte_pequeno;
+}
+void setPorte_grande(int porte_grande){
+    this->porte_grande = porte_grande;
 }

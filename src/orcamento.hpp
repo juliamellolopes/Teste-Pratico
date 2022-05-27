@@ -27,6 +27,12 @@ public:
     void orcamentoChowChawgas();
     // comparando orcamentos
     void comparandoOrcamentos();
+    // metodos set
+    void setDia(int dia);
+    void setMes(int mes);
+    void setAno(int ano);
+    void setPorte_pequeno(int porte_pequeno);
+    void setPorte_grande(int porte_grandes);
 };
 
 #endif
