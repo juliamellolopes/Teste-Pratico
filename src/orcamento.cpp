@@ -105,25 +105,25 @@ void comparandoOrcamentos()
     orcamentoMeuCaninoFeliz();
     orcamentoVaiRex();
     orcamentoChowChawgas();
-    if (orcamento1 > orcamento2 || orcamento1 > orcamento3) // se o orcamento 1 for o maior
+    if (orcamento1 < orcamento2 || orcamento1 < orcamento3) // se o orcamento 1 for o maior
     {
         cout << "\n\tResultado: Meu Canino Feliz - %f" << orcamento1;
     }
-    else if (orcamento2 > orcamento1 || orcamento2 > orcamento3) // se o orcamento 2 for o maior
+    else if (orcamento2 < orcamento1 || orcamento2 < orcamento3) // se o orcamento 2 for o maior
     {
         cout << "\n\tResultado: Vai Rex - %f" << orcamento2;
     }
-    else if (orcamento3 > orcamento1 || orcamento3 > orcamento2) // se o orcamento 3 for o maior
+    else if (orcamento3 < orcamento1 || orcamento3 < orcamento2) // se o orcamento 3 for o maior
     {
         cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
     }
     else if (orcament1 == orcamento2 && orcamento2 == orcamento3 && orcamento1 == orcamento3) // se existirem orcamentos iguais
     {
         if (orcament1 == orcamento2) // se 1 e 2 forem iguais
-            cout << "\n\tResultado: Vai Rex - %f" << orcamento2; 
-        if (orcamento2 == orcamento3)
+            cout << "\n\tResultado: Vai Rex - %f" << orcamento2;
+        if (orcamento2 == orcamento3) // se 3 e 2 forem iguais
             cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
-        if (orcamento1 == orcamento3)
+        if (orcamento1 == orcamento3) // se 1 e 3 forem iguais
             cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
         if (orcamento1 == orcamento2 || orcamento1 == orcamento3)
             cout << "\n\tResultado: ChowChawgas - %f" << orcamento3;
@@ -132,18 +132,24 @@ void comparandoOrcamentos()
         cout << "\n[ERRO]:Nao foi possivel calcular o orcamento";
 }
 
-void setDia(int dia){
+// implementação dos metodos set
+void setDia(int dia)
+{
     this->dia = dia;
 }
-void setMes(int mes){
+void setMes(int mes)
+{
     this->mes = mes;
 }
-void setAno(int ano){
-    this-> ano = ano;
+void setAno(int ano)
+{
+    this->ano = ano;
 }
-void setPorte_pequeno(int porte_pequeno){
+void setPorte_pequeno(int porte_pequeno)
+{
     this->porte_pequeno = porte_pequeno;
 }
-void setPorte_grande(int porte_grande){
+void setPorte_grande(int porte_grande)
+{
     this->porte_grande = porte_grande;
 }
