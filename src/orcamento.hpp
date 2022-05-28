@@ -32,7 +32,7 @@ public:
     void setMes(int mes);
     void setAno(int ano);
     void setPorte_pequeno(int porte_pequeno);
-    void setPorte_grande(int porte_grandes);
+    void setPorte_grande(int porte_grande);
 };
 
 #endif
