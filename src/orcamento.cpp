@@ -6,6 +6,13 @@ Orcamento::Orcamento() {
     dia = mes = ano = porte_pequeno = porte_grande, formula, dia_semana = orcamento1 = orcamento2 = orcamento3 = 0;
 }
 
+// implementação dos metodos set
+void Orcamento::setDia(int dia) {this->dia = dia;}
+void Orcamento::setMes(int mes) {this->mes = mes;}
+void Orcamento::setAno(int ano) {this->ano = ano;}
+void Orcamento::setPorte_pequeno(int porte_pequeno) {this->porte_pequeno = porte_pequeno;}
+void Orcamento::setPorte_grande(int porte_grande) {this->porte_grande = porte_grande;}
+
 // verificar se é ou não final de semana onde vai retornar 0 ou 1,
 // em que o 1 é para se for final de semana, senão retorna 0
 bool Orcamento::verificarDia() {
@@ -88,10 +95,3 @@ void Orcamento::comparandoOrcamentos() {
     else                                                            cout << "\n[ERRO]:Nao foi possivel calcular o orcamento";
     cout << endl;
 }
-
-// implementação dos metodos set
-void Orcamento::setDia(int dia) {this->dia = dia;}
-void Orcamento::setMes(int mes) {this->mes = mes;}
-void Orcamento::setAno(int ano) {this->ano = ano;}
-void Orcamento::setPorte_pequeno(int porte_pequeno) {this->porte_pequeno = porte_pequeno;}
-void Orcamento::setPorte_grande(int porte_grande) {this->porte_grande = porte_grande;}
