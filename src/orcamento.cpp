@@ -9,15 +9,12 @@ Orcamento::Orcamento() {
 // verificar se é ou não final de semana onde vai retornar 0 ou 1,
 // em que o 1 é para se for final de semana, senão retorna 0
 bool Orcamento::verificarDia() {
-    
-    if (mes == 01) // mês de janeiro será o mês 13 do ano anterior.
-    {
+
+    if (mes == 01){ // mês de janeiro será o mês 13 do ano anterior
         mes = 13;
         ano = ano - 1;
     }
-
-    if (mes == 02) // mês de favereiro será o mês 14 do ano anterior.
-    {
+    if (mes == 02){ // mês de favereiro será o mês 14 do ano anterior
         mes = 14;
         ano = ano - 1;
     }
@@ -37,18 +34,16 @@ void Orcamento::verificarAno() {
     // verifica se o ano é ou não Bissexto e se a data é valida
     if ((ano % 4 == 0 && (ano % 400 == 0 || ano % 100 != 0)) && (dia > 0 && dia <= 31) && (mes > 0 && mes <= 12)) {
         if (mes == 2 && dia > 29 || mes == 4 && dia > 30 || mes == 6 && dia > 30 || mes == 9 && dia > 30 || mes == 11 && dia > 30) {
-            cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano. \n";
+            cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano \n";
             exit;
-        } else
-            verificarDia();
+        } else verificarDia();
     } else if (!(ano % 4 == 0 && (ano % 400 == 0 || ano % 100 != 0)) && (dia > 0 && dia <= 31) && (mes > 0 && mes <= 12)) {
         if (mes == 2 && dia > 29 || mes == 4 && dia > 30 || mes == 6 && dia > 30 || mes == 9 && dia > 30 || mes == 11 && dia > 30) {
-            cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano. \n";
+            cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano \n";
             exit;
-        } else
-            verificarDia();
-    } else
-        cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano. \n";
+        } else verificarDia();
+    } else 
+        cout << "\n[ERRO]: A data informada nao existe no calendario Gregoriano \n";
 }
 
 // metodo de orçamento do MeuCaninoFeliz
